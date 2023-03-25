@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0px;
+  text-align: center;
+  background-color: #eee;
+}
+.site-container{
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  background-color: #eaeaea;
+  box-shadow: 3px 5px 5px #ddd , -3px -5px 5px #ddd;
+}
