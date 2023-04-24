@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Home from './pages/Home';
 import { useState } from 'react';
 import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
 
 const theme = createTheme({
   palette: {
@@ -25,17 +26,18 @@ const theme = createTheme({
 });
 
 function App() {
-  const [menu,setMenu] = useState('home-menu');
+  const [menu, setMenu] = useState('home-menu');
 
-  const handleMenuChange = (menuOption)=>{
+  const handleMenuChange = (menuOption) => {
     setMenu(menuOption);
   }
   return (
     <ThemeProvider theme={theme}>
       <div className='site-container'>
-        <Header onMenuChange={handleMenuChange}/>
-        {menu=='home-menu'&&<Home></Home>}
-        {menu=='about-menu'&&<AboutUs></AboutUs>}
+        <Header onMenuChange={handleMenuChange} />
+        {menu == 'home-menu' && <Home></Home>}
+        {menu == 'about-menu' && <AboutUs></AboutUs>}
+        {menu == 'contact-menu' && <Contact></Contact>}
         <Footer />
       </div>
     </ThemeProvider>

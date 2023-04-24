@@ -16,10 +16,6 @@ export default function Header(props) {
     }
     return (
         <div>
-            <div className='logo-container'>
-                <img src={logo} className="App-logo" alt="logo" />
-                <Typography> Renuka Technologies</Typography>
-            </div>
             <Box className="menu-container" onClick={handleMenuChange}>
                 <span id="home-menu" className='menu-option' >
                     Home

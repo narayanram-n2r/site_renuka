@@ -6,7 +6,7 @@ export default function Footer() {
 
     return (
         <div className='footer'>
-            Copyright © 2014. Renuka Technologies India Pvt. Ltd 
+            Copyright © 2023. Renuka Electroplatings 
         </div>
     );
 }

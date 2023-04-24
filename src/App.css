@@ -6,10 +6,14 @@ body{
   text-align: center;
   background-color: #eee;
 }
+html, body, #root{
+  height: 100%;
+}
 .site-container{
   display: inline-block;
   width: 70%;
   height: 100%;
+  position: relative;
   background-color: #eaeaea;
   box-shadow: 3px 5px 5px #ddd , -3px -5px 5px #ddd;
 }
