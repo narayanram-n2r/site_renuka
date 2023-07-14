@@ -1,5 +1,4 @@
 import * as React from 'react';
-import '../css/Header.css';
 import '../css/Pages.css';
 
 import styled from '@emotion/styled'
@@ -8,6 +7,7 @@ import { Button, Divider, FormControl, TextField } from '@mui/material';
 const HalfSection = styled.div`
     width : 50%;
     display : flex;
+    height : 100%;
     flex-direction : column;
     justify-contents : center;
     align-items : center;
@@ -23,16 +23,30 @@ const ContactContainer = styled.div`
     align-items : center;
 `
 
+const FormContainer = styled.div`
+    margin : auto;
+    width : 50%;
+    display : flex;
+    height : 50%;
+    flex-direction : column;
+    justify-contents : center;
+    align-items : center;
+    gap : 20px;
+`
+
 
 export default function Home() {
 
     return (
         <ContactContainer>
             <HalfSection>
-                <TextField label="Email" />
-                <TextField label="Subject" />
-                <TextField label="Description" multiLine={true} />
-                <Button variant='contained'>Contact Us</Button>
+                <FormContainer>
+                    <TextField label="Email" />
+                    <TextField label="Subject" />
+                    <TextField label="Description" multiLine={true} />
+                    <Button variant='contained'>Contact Us</Button>
+                </FormContainer>
+
             </HalfSection>
             <Divider orientation="vertical" flexItem></Divider>
             <HalfSection>

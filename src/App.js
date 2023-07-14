@@ -1,12 +1,13 @@
 
-import './App.css';
-import Header from './components/Header';
+import styles from './App.module.css';
+import Header from './components/Header/Header';
 import Footer from './components/Footer';
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import { useState } from 'react';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
+import { Box } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -33,13 +34,20 @@ function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <div className='site-container'>
-        <Header onMenuChange={handleMenuChange} />
-        {menu == 'home-menu' && <Home></Home>}
-        {menu == 'about-menu' && <AboutUs></AboutUs>}
-        {menu == 'contact-menu' && <Contact></Contact>}
+      <Header onMenuChange={handleMenuChange} />
+      <div className={styles.siteContainer}>
+        <Box className={styles.pageWrapper}>
+          <Home></Home>
+        </Box>
+        <Box className={styles.pageWrapper}>
+          <AboutUs></AboutUs>
+        </Box>
+        <Box className={styles.pageWrapper}>
+        <Contact></Contact>
+        </Box>
         <Footer />
       </div>
+
     </ThemeProvider>
 
   );
