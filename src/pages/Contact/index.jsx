@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../css/Pages.css';
+import styles from './Contact.module.css';
 
 import styled from '@emotion/styled'
 import { Button, Divider, FormControl, TextField } from '@mui/material';
@@ -18,9 +18,10 @@ const ContactContainer = styled.div`
     display : flex;
     position : relative;
     width : 100%;
-    height : calc( 100% - 100px );
+    height:100%;
     justify-contents : center;
     align-items : center;
+    background-color : #E2F6CA;
 `
 
 const FormContainer = styled.div`
@@ -35,7 +36,7 @@ const FormContainer = styled.div`
 `
 
 
-export default function Home() {
+export default function Contact() {
 
     return (
         <ContactContainer>

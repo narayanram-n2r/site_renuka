@@ -1,10 +1,8 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-import logo from '../../assets/ect_03.png';
 
 import { Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-// import styled from '@emotion/styled'
+import companyLogo from '../../assets/company-logo.jpeg'
 
 import styles from './Header.module.css';
 
@@ -20,6 +18,9 @@ export default function Header(props) {
     return (
 
         <Box className={styles.headerMenuContainer} onClick={handleMenuChange}>
+            <Box className={styles.logoContainer}>
+                <img src={companyLogo} height="50" width={50}/>
+            </Box>
             <Stack direction="row" alignItems="center" justifyContent="center" style={{height:"100%"}}>
                 <span id="home-menu" className={`${styles.menuOption} ${styles.hoverUnderlineAnimation} `}>
                     Home
@@ -32,9 +33,6 @@ export default function Header(props) {
                 </span>
                 <span id="client-menu" className={`${styles.menuOption} ${styles.hoverUnderlineAnimation} `}>
                     Clients
-                </span>
-                <span id="quality-menu" className={`${styles.menuOption} ${styles.hoverUnderlineAnimation} `}>
-                    Quality
                 </span>
                 <span id="contact-menu" className={`${styles.menuOption} ${styles.hoverUnderlineAnimation} `}>
                     Contact Us

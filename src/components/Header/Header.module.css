@@ -11,6 +11,17 @@
     background-color: #0000003d;
 }
 
+.logoContainer{
+    position: absolute;
+    left: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+}
+
 .menuOption {
     width: 150px;
     display: flex;

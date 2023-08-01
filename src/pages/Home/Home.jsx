@@ -9,7 +9,7 @@ import Carousel from "nuka-carousel";
 export default function Home() {
 
     return (
-        <div className={styles.sliderContainer}>
+        <div className={styles.sliderContainer} id="home-container">
             <Carousel adaptiveHeight={true} autoplay={true} autoplayInterval={4000} withoutControls={true} wrapAround={true}>
                 <img src={bgImage1} />
                 <img src={bgImage2} />
